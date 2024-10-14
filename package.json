@@ -12,6 +12,7 @@
   },
   "scripts": {
     "dev:client": "lerna run dev",
-    "build:client": "lerna run build"
+    "build:client": "lerna run build",
+    "build:server": "lerna run build:server"
   }
 }
