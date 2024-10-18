@@ -10,7 +10,7 @@ jobs:
       - name: Run a script
         run: echo "Hello, this is running on a self-hosted runner!"
   check-ts:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     strategy:
       matrix:
         node-version: [ 20 ]
