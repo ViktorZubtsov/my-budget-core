@@ -1,0 +1,22 @@
+{
+  "name": "my-budget-core",
+  "version": "0.1.0",
+  "main": "index.js",
+  "repository": "git@github.com:ViktorZubtsov/my-budget-core.git",
+  "author": "ViktorZubtsov",
+  "license": "MIT",
+  "scripts": {
+    "bump": "standard-version --skip.tag",
+    "release": "git flow release start `sh scripts/nextver.sh`",
+    "publish": "git flow release finish `sh scripts/ver.sh`"
+  },
+  "devDependencies": {
+    "commitizen": "^4.3.1",
+    "cz-conventional-changelog": "^3.3.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
