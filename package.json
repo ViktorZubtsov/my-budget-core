@@ -10,6 +10,9 @@
     "vite:client-home": "lerna run --scope client-home dev --stream",
     "start:client-home": "lerna run --scope client-home storybook --stream",
     "build:client-home": "lerna run --scope client-home build --stream",
+    "start:dev:backend": "lerna run --scope backend start --stream",
+    "start:prod:backend": "lerna run --scope backend start:prod --stream",
+    "build:backend": "lerna run --scope backend build --stream",
     "vite:vite-common": "lerna run --scope vite-common dev",
     "build:vite-common": "lerna run --scope vite-common build --stream",
     "test:vite-common": "lerna run --scope vite-common test --stream",
@@ -24,9 +27,9 @@
     "packages/*"
   ],
   "dependencies": {
+    "@salutejs/plasma-icons": "1.190.0",
     "@salutejs/plasma-tokens": "^1.55.0",
     "@salutejs/plasma-ui": "^1.288.0",
-    "@salutejs/plasma-icons": "1.190.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "styled-components": "^5.3.11"
@@ -47,6 +50,7 @@
     "@storybook/react": "^7.0.18",
     "@storybook/react-vite": "^7.0.18",
     "@storybook/testing-library": "^0.1.0",
+    "@swc/core": "^1.7.40",
     "@testing-library/react": "^14.0.0",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
@@ -72,6 +76,7 @@
     "storybook-addon-mock": "^4.0.0",
     "ts-node": "^10.9.1",
     "typescript": "^5.0.2",
+    "unplugin-swc": "^1.5.1",
     "vite": "^4.3.2",
     "vitest": "^1.4.0"
   },
