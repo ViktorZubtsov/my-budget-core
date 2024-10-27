@@ -10,7 +10,7 @@
     "vite:client-home": "lerna run --scope client-home dev --stream",
     "start:client-home": "lerna run --scope client-home storybook --stream",
     "build:client-home": "lerna run --scope client-home build --stream",
-    "start:vite-common": "lerna run --scope vite-common dev",
+    "vite:vite-common": "lerna run --scope vite-common dev",
     "build:vite-common": "lerna run --scope vite-common build --stream",
     "test:vite-common": "lerna run --scope vite-common test --stream",
     "test:watch:vite-common": "lerna run --scope vite-common test:watch --stream",
