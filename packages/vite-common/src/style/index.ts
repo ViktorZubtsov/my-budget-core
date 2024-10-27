@@ -1,6 +1,6 @@
 import {createGlobalStyle} from 'styled-components';
 
-export const MainStyle = createGlobalStyle`
+export const CoreStyle = createGlobalStyle`
   * {
     box-sizing: border-box;
     font-family: 'SB Sans Text', Helvetica, Arial, sans-serif;
