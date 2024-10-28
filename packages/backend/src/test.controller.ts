@@ -1,6 +1,6 @@
 import { Controller, Get } from '@nestjs/common';
 
-@Controller('api/test')
+@Controller()
 export class TestController {
     @Get()
     getTestData() {
