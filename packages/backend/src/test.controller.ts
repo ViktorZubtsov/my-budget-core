@@ -7,4 +7,3 @@ export class TestController {
         return { message: 'Hello, this is your test data!' };
     }
 }
-
