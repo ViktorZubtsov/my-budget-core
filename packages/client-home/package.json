@@ -5,14 +5,29 @@
   "type": "module",
   "types": "dist/types/index.d.ts",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite -- --host",
     "build": "tsc && vite build",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
+    "tunnel": "vk-tunnel --http-protocol=http --host=localhost --port=5173",
+    "deploy": "vite build && vk-miniapps-deploy",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
   "dependencies": {
+    "@vkontakte/icons": "^2.92.0",
+    "@vkontakte/vk-bridge": "^2.13.0",
+    "@vkontakte/vk-bridge-react": "^1.0.1",
+    "@vkontakte/vk-mini-apps-router": "^1.4.2",
+    "@vkontakte/vkui": "^6.0.0",
     "vite-common": "^1.0.0"
+  },
+  "devDependencies": {
+    "@storybook/addon-essentials": "^6.5.9",
+    "@vitejs/plugin-legacy": "^5.3.1",
+    "@vitejs/plugin-react": "^4.2.1",
+    "@vkontakte/vk-miniapps-deploy": "^0.1.6",
+    "@vkontakte/vk-tunnel": "^0.2.0",
+    "eruda": "^3.0.1"
   }
 }

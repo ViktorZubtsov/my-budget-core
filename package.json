@@ -7,7 +7,8 @@
   "private": true,
   "license": "MIT",
   "scripts": {
-    "vite:client-home": "lerna run --scope client-home dev --stream",
+    "vite:client-home": "lerna run --scope client-home dev  --stream",
+    "vite:tunnel:client-home": "lerna run --scope client-home tunnel  --stream",
     "start:client-home": "lerna run --scope client-home storybook --stream",
     "build:client-home": "lerna run --scope client-home build --stream",
     "start:dev:backend": "lerna run --scope backend start --stream",
