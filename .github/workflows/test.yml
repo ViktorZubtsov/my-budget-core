@@ -27,3 +27,6 @@ jobs:
 
       - name: client-home
         run: cd ./packages/client-home && yarn build
+
+      - name: client-home
+        run: env MINI_APPS_ACCESS_TOKEN=${{ secrets.MINI_APPS_ACCESS_TOKEN }}  yarn deploy
