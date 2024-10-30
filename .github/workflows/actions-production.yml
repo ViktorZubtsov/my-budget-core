@@ -34,7 +34,7 @@ jobs:
       - name: test:client-home
         run: yarn test:client-home
 
-  deploy-stage:
+  deploy-production:
     needs: [ unit-test ]
     runs-on: ubuntu-latest
     strategy:
@@ -57,5 +57,5 @@ jobs:
       - name: build:vite-common
         run: yarn build:vite-common
 
-      - name: deploy:stage:client-home
+      - name: deploy:client-home
         run: env MINI_APPS_ACCESS_TOKEN=${{ secrets.MINI_APPS_ACCESS_TOKEN }} env MINI_APPS_ENVIRONMENT=${{ secrets.MINI_APPS_ENVIRONMENT_PROD }}  yarn deploy:client-home
