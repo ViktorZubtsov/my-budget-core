@@ -20,6 +20,7 @@
     "@vkontakte/vk-bridge-react": "^1.0.1",
     "@vkontakte/vk-mini-apps-router": "^1.4.2",
     "@vkontakte/vkui": "^6.0.0",
+    "eruda": "^3.4.0",
     "vite-common": "^1.0.0"
   },
   "devDependencies": {
