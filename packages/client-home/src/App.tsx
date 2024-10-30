@@ -5,17 +5,19 @@ import {useEffect} from "react";
 export const App = () => {
 
     useEffect(() => {
-        console.log('ss')
-        bridge.send('VKWebAppGetEmail').then((data)=>{
-            console.log(data, 'data')
-        });
+        const x =  async () => {
+            const userData = await bridge.send('VKWebAppGetUserInfo', {})
+
+            console.log(userData)
+        }
+        x()
     }, []);
 
   return (
       <>
           <CoreProviders>
               <AccountsBadge text="dcwef"  size="s" $colorCode={"green"} />
-              <div>de</div>
+              <div>Test</div>
           </CoreProviders>
 
       </>
