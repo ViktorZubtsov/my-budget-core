@@ -1,6 +1,6 @@
 {
   "name": "my-budget-core",
-  "version": "0.3.2",
+  "version": "1.0.0",
   "main": "index.js",
   "repository": "git@github.com:ViktorZubtsov/my-budget-core.git",
   "author": "ViktorZubtsov",
