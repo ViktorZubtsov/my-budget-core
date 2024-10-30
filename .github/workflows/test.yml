@@ -25,5 +25,5 @@ jobs:
       - name: build:vite-common
         run: yarn build:vite-common
 
-      - name: build:vite-common
+      - name: client-home
         run: cd ./packages/client-home && yarn build
