@@ -1,6 +1,16 @@
 name: actions-release
 run-name: Pull request release branch.
-on: [ push ]
+on:
+  pull_request:
+    branches:
+      - 'main'
+    paths-ignore:
+      - 'dependabot/**'
+  push:
+    branches:
+      - 'release/*'
+    paths-ignore:
+      - 'dependabot/**'
 jobs:
   unit-test:
     runs-on: ubuntu-latest
@@ -55,4 +65,4 @@ jobs:
         run: yarn build:vite-common
 
       - name: deploy:stage:client-home
-        run: cd ./packages/client-home && env MINI_APPS_ACCESS_TOKEN=${{ secrets.MINI_APPS_ACCESS_TOKEN }} env MINI_APPS_ENVIRONMENT=${{ secrets.MINI_APPS_ENVIRONMENT_DEV }}  yarn deploy
+        run: env MINI_APPS_ACCESS_TOKEN=${{ secrets.MINI_APPS_ACCESS_TOKEN }} env MINI_APPS_ENVIRONMENT=${{ secrets.MINI_APPS_ENVIRONMENT_DEV }}  yarn deploy:client-home
