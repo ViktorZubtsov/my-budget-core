@@ -1,0 +1,35 @@
+name: actions-request-to-release
+run-name: Pull request to release branch jobs.
+on:
+  pull_request:
+    branches:
+      - 'release/*'
+jobs:
+  unit-test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [ 20 ]
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Install dependencies
+        run: yarn install --immutable --immutable-cache --check-cache
+
+      - name: test:vite-common
+        run: yarn test:vite-common
+
+      - name: test:backend
+        run: yarn test:backend
+
+      - name: test:backend
+        run: yarn test:backend
+
+      - name: test:client-home
+        run: yarn test:client-home

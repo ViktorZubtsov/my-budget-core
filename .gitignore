@@ -3,3 +3,7 @@ node_modules/
 dist/
 coverage/
 lerna-debug.log
+.vercel
+build.zip
+packages/client-home/build.zip
+build/
