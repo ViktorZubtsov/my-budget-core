@@ -17,7 +17,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
 
       - name: Install dependencies
-        run: yarn install
+        run: yarn install --immutable --immutable-cache --check-cache
 
       - name: test:vite-common
         run: yarn test:vite-common
@@ -31,7 +31,7 @@ jobs:
       - name: test:client-home
         run: yarn test:client-home
 
-  deploy-dev:
+  deploy-stage:
     needs: [ unit-test ]
     runs-on: ubuntu-latest
     strategy:
@@ -49,10 +49,10 @@ jobs:
           node-version: ${{ matrix.node-version }}
 
       - name: Install dependencies
-        run: yarn install
+        run: yarn install --immutable --immutable-cache --check-cache
 
       - name: build:vite-common
         run: yarn build:vite-common
 
-      - name: deploy:dev:client-home
+      - name: deploy:stage:client-home
         run: cd ./packages/client-home && env MINI_APPS_ACCESS_TOKEN=${{ secrets.MINI_APPS_ACCESS_TOKEN }} env MINI_APPS_ENVIRONMENT=${{ secrets.MINI_APPS_ENVIRONMENT_DEV }}  yarn deploy
