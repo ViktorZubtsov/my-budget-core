@@ -1,11 +1,16 @@
 import {AccountsBadge, CoreProviders} from "vite-common";
 import bridge from '@vkontakte/vk-bridge';
+import {useEffect} from "react";
 
 export const App = () => {
 
-    bridge.send('VKWebAppGetEmail').then((data)=>{
-        console.log(data, 'data')
-    });
+    useEffect(() => {
+        console.log('ss')
+        bridge.send('VKWebAppGetEmail').then((data)=>{
+            console.log(data, 'data')
+        });
+    }, []);
+
   return (
       <>
           <CoreProviders>
