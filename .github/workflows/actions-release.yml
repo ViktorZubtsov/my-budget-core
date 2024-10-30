@@ -1,5 +1,5 @@
 name: actions-release
-run-name: Pull request release branch.
+run-name: Release jobs.
 on:
   pull_request:
     branches:

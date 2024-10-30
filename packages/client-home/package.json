@@ -12,7 +12,7 @@
     "test": "vitest run --coverage",
     "test:watch": "vitest",
     "tunnel": "vk-tunnel --http-protocol=http --host=localhost --port=5173",
-    "deploy": "tsc && vite build && vk-miniapps-deploy",
+    "deploy": "vite build && vk-miniapps-deploy",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
