@@ -1,11 +1,16 @@
 import {AccountsBadge, CoreProviders} from "vite-common";
+import bridge from '@vkontakte/vk-bridge';
 
 export const App = () => {
+
+    bridge.send('VKWebAppGetEmail').then((data)=>{
+        console.log(data, 'data')
+    });
   return (
       <>
           <CoreProviders>
               <AccountsBadge text="dcwef"  size="s" $colorCode={"green"} />
-              <div>dfwef</div>
+              <div>de</div>
           </CoreProviders>
 
       </>
