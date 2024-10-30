@@ -9,8 +9,10 @@
     "build": "tsc && vite build",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
+    "test": "vitest run --coverage",
+    "test:watch": "vitest",
     "tunnel": "vk-tunnel --http-protocol=http --host=localhost --port=5173",
-    "deploy": "vite build && vk-miniapps-deploy",
+    "deploy": "tsc && vite build && vk-miniapps-deploy",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
