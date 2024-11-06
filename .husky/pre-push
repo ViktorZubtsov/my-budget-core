@@ -1,0 +1,6 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+yarn run check:ts:client-home
+yarn run check:ts:backend
+yarn run check:ts:vite-common

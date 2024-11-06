@@ -1,4 +1,4 @@
-import {ACCOUNTS_COLORS} from "../constant";
+import {ACCOUNTS_COLORS} from '../constant';
 
 export type TAccountsColors = keyof typeof ACCOUNTS_COLORS;
 

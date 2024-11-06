@@ -1,8 +1,7 @@
-import { describe, it, expect } from 'vitest';
+import {describe, expect, it} from 'vitest';
 
 describe('Test', () => {
-
     it('Test', () => {
-        expect(2+2).toBe(4);
+        expect(2 + 2).toBe(4);
     });
 });
