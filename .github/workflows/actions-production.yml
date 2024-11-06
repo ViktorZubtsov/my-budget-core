@@ -31,8 +31,8 @@ jobs:
       - name: test:backend
         run: yarn test:backend
 
-      - name: test:client-home
-        run: yarn test:client-home
+      - name: test:client-vk
+        run: yarn test:client-vk
 
   deploy-production:
     needs: [ unit-test ]
@@ -57,5 +57,5 @@ jobs:
       - name: build:vite-common
         run: yarn build:vite-common
 
-      - name: deploy:client-home
-        run: env MINI_APPS_ACCESS_TOKEN=${{ secrets.MINI_APPS_ACCESS_TOKEN }} env MINI_APPS_ENVIRONMENT=${{ secrets.MINI_APPS_ENVIRONMENT_PROD }}  yarn deploy:client-home
+      - name: deploy:client-vk
+        run: env MINI_APPS_ACCESS_TOKEN=${{ secrets.MINI_APPS_ACCESS_TOKEN }} env MINI_APPS_ENVIRONMENT=${{ secrets.MINI_APPS_ENVIRONMENT_PROD }}  yarn deploy:client-vk

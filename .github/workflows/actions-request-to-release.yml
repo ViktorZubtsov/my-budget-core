@@ -31,5 +31,5 @@ jobs:
       - name: test:backend
         run: yarn test:backend
 
-      - name: test:client-home
-        run: yarn test:client-home
+      - name: test:client-vk
+        run: yarn test:client-vk
