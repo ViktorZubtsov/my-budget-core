@@ -1,7 +1,7 @@
+import {colors} from '@salutejs/plasma-tokens';
 import {Badge, textS} from '@salutejs/plasma-ui';
 import {BadgeProps} from '@salutejs/plasma-ui/components/Badge/Badge';
 import styled from 'styled-components';
-import {colors} from '@salutejs/plasma-tokens';
 
 export const ACCOUNTS_COLORS = {
     critical: colors.buttonCritical,
@@ -26,4 +26,4 @@ export const AccountsBadge = styled(Badge)<IAccountsBadgeProps>`
     ${textS}
 `;
 
-export default  AccountsBadge;
+export default AccountsBadge;

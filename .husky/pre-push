@@ -1,0 +1,4 @@
+yarn run check:ts:client-vk
+yarn run check:ts:vite-common
+yarn run check:ts:backend
+

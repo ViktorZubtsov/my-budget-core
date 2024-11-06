@@ -1,8 +1,9 @@
 import {render} from '@testing-library/react';
 import {describe, expect, test} from 'vitest';
-import {AccountsBadge, TAccountsColors} from "./index.ts";
-import {TEST_ID_TASK} from "../../constant/dataTest.ts";
-import {MOCK_ACCOUNT} from "../../mock";
+
+import {TEST_ID_TASK} from '../../constant/dataTest.ts';
+import {MOCK_ACCOUNT} from '../../mock';
+import {AccountsBadge, TAccountsColors} from './index.ts';
 
 describe('AccountsBadge', () => {
     const {getByTestId} = render(

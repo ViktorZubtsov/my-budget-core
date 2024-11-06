@@ -26,6 +26,9 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
+      - name: Enable Corepack
+        run: corepack enable
+
       - name: Install dependencies
         run: yarn install --immutable --immutable-cache --check-cache
 
@@ -38,31 +41,5 @@ jobs:
       - name: test:backend
         run: yarn test:backend
 
-      - name: test:client-home
-        run: yarn test:client-home
-
-  deploy-stage:
-    needs: [ unit-test ]
-    runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        node-version: [ 20 ]
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Use Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: ${{ matrix.node-version }}
-
-      - name: Install dependencies
-        run: yarn install --immutable --immutable-cache --check-cache
-
-      - name: build:vite-common
-        run: yarn build:vite-common
-
-      - name: deploy:stage:client-home
-        run: env MINI_APPS_ACCESS_TOKEN=${{ secrets.MINI_APPS_ACCESS_TOKEN }} env MINI_APPS_ENVIRONMENT=${{ secrets.MINI_APPS_ENVIRONMENT_DEV }}  yarn deploy:client-home
+      - name: test:client-vk
+        run: yarn test:client-vk

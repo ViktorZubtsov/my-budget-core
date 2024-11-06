@@ -1,4 +1,4 @@
-import {IAccount} from "../model";
+import {IAccount} from '../model';
 
 // import {IAccount, IGoal, TTask} from '@/model';
 //
@@ -10,7 +10,6 @@ import {IAccount} from "../model";
 //     updatedAt: new Date(),
 //     userUid: '',
 // };
-
 
 export const MOCK_ACCOUNT: IAccount = {
     colorCode: 'green',
