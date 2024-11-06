@@ -1,0 +1,66 @@
+name: actions-release-vk
+run-name: Release jobs.
+on:
+  pull_request:
+    branches:
+      - 'vk'
+    paths-ignore:
+      - 'dependabot/**'
+jobs:
+  unit-test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [ 20 ]
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Enable Corepack
+        run: corepack enable
+
+      - name: Install dependencies
+        run: yarn install --immutable --immutable-cache --check-cache
+
+      - name: test:vite-common
+        run: yarn test:vite-common
+
+      - name: test:backend
+        run: yarn test:backend
+
+      - name: test:backend
+        run: yarn test:backend
+
+      - name: test:client-vk
+        run: yarn test:client-vk
+
+  deploy-stage:
+    needs: [ unit-test ]
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        node-version: [ 20 ]
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Install dependencies
+        run: yarn install --immutable --immutable-cache --check-cache
+
+      - name: build:vite-common
+        run: yarn build:vite-common
+
+      - name: deploy:client-vk
+        run: env MINI_APPS_ACCESS_TOKEN=${{ secrets.MINI_APPS_ACCESS_TOKEN }} env MINI_APPS_ENVIRONMENT=${{ secrets.MINI_APPS_ENVIRONMENT_DEV }}  yarn deploy:client-vk
