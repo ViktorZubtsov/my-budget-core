@@ -1,5 +1,4 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-
-yarn run check:ts:client-home && yarn run check:ts:client-home
+npm run check:ts:client-home
