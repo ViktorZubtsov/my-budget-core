@@ -1,4 +1,4 @@
-import {AccountsBadge, CoreProviders} from 'vite-common';
+import {AccountsBadge, xsxs} from 'vite-common';
 
 export const App = () => {
     return (
