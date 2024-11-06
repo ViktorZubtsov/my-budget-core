@@ -31,7 +31,8 @@
     "bump": "standard-version --skip.tag",
     "release": "git flow release start `sh scripts/nextver.sh`",
     "publish": "git flow release finish `sh scripts/ver.sh`",
-    "eslint": "eslint ./ --fix --max-warnings=0"
+    "eslint": "eslint ./ --fix --max-warnings=0",
+    "prepare": "husky"
   },
   "lint-staged": {
     "!(*min).{js,jsx,ts,tsx}": [

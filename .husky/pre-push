@@ -1,1 +1,4 @@
 yarn run check:ts:client-home
+yarn run check:ts:client-common
+yarn run check:ts:backend
+
