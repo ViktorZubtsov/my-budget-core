@@ -12,7 +12,8 @@
     "test": "vitest run --coverage",
     "test:watch": "vitest",
     "start:debug": "nest start --debug --watch",
-    "start:prod": "node dist/main"
+    "start:prod": "node dist/main",
+    "check:ts": "tsc --extendedDiagnostics"
   },
   "dependencies": {
     "@nestjs/common": "^10.0.0",

@@ -1,9 +1,10 @@
-import {DeviceThemeProvider} from "@salutejs/plasma-ui";
-import {CoreStyle} from "../style";
-import {FC, ReactNode} from "react";
 import {background, gradient, text} from '@salutejs/plasma-tokens';
+import {plasma_b2c__dark} from '@salutejs/plasma-tokens/themes';
+import {DeviceThemeProvider} from '@salutejs/plasma-ui';
+import {FC, ReactNode} from 'react';
 import {createGlobalStyle} from 'styled-components';
-import {plasma_b2c__dark} from "@salutejs/plasma-tokens/themes";
+
+import {CoreStyle} from '../style';
 
 interface ICoreProviders {
     children: ReactNode;
@@ -23,15 +24,15 @@ export const DocumentStyle = createGlobalStyle`
 `;
 
 export const CoreProviders: FC<ICoreProviders> = ({children}) => {
-  return (
-      <>
-          <DeviceThemeProvider responsiveTypo>
-              {children}
-              <DocumentStyle />
-              <ThemeStyle />
-          </DeviceThemeProvider>
-          <CoreStyle />
-      </>
-  )
-}
-export default  CoreProviders;
+    return (
+        <>
+            <DeviceThemeProvider responsiveTypo>
+                {children}
+                <DocumentStyle />
+                <ThemeStyle />
+            </DeviceThemeProvider>
+            <CoreStyle />
+        </>
+    );
+};
+export default CoreProviders;

@@ -5,5 +5,5 @@ coverage/
 lerna-debug.log
 .vercel
 build.zip
-packages/client-home/build.zip
+packages/client-vk/build.zip
 build/
