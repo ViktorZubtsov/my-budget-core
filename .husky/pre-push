@@ -1,4 +1,1 @@
-#!/usr/bin/env sh
-set -x
-. "$(dirname -- "$0")/_/husky.sh"
 yarn run check:ts:client-home
