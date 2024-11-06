@@ -2,6 +2,7 @@ import legacy from '@vitejs/plugin-legacy';
 import react from '@vitejs/plugin-react';
 import {defineConfig} from 'vite';
 
+//
 function handleModuleDirectivesPlugin() {
     return {
         name: 'handle-module-directives-plugin',
